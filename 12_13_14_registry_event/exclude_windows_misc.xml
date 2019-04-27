@@ -2,6 +2,8 @@
    <EventFiltering>
       <RegistryEvent onmatch="exclude">
 			<!--SECTION: Windows:Misc-->
+			<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Input\State\SoftwareKeyboardDeployed</TargetObject>
+			<TargetObject condition="is">HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AutoRotation\LastOrientation</TargetObject>
 			<TargetObject condition="end with">\CurrentVersion\Run</TargetObject> <!--Microsoft:Windows: Remove noise from the "\Windows\CurrentVersion\Run" wildcard-->
 			<TargetObject condition="end with">\CurrentVersion\RunOnce</TargetObject> <!--Microsoft:Windows: Remove noise from the "\Windows\CurrentVersion\Run" wildcard-->
 			<TargetObject condition="end with">\CurrentVersion\App Paths</TargetObject> <!--Microsoft:Windows: Remove noise from the "\Windows\CurrentVersion\App Paths" wildcard-->

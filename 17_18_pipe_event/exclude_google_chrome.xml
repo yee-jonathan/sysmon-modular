@@ -1,0 +1,7 @@
+<Sysmon schemaversion="4.1">
+   <EventFiltering>
+      <PipeEvent onmatch="exclude">
+          <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>           
+      </PipeEvent>
+  </EventFiltering>
+</Sysmon>

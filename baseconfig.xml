@@ -10,7 +10,7 @@
       <!-- Event ID 3 == Network Connection. -->
       <NetworkConnect onmatch="exclude"/>
       <!-- Event ID 5 == Process Terminated. -->
-      <ProcessTerminate onmatch="exclude"/>
+      <ProcessTerminate onmatch="include"/>
       <!-- Event ID 6 == Driver Loaded. -->
       <DriverLoad onmatch="exclude"/>
       <!-- Event ID 7 == Image Loaded. -->

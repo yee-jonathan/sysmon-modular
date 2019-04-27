@@ -1,7 +1,7 @@
 <Sysmon schemaversion="4.1">
    <EventFiltering>
       <NetworkConnect onmatch="exclude">
-			<Image condition="is">C:\Windows\System32\svchost.exe</Image> <!--Windows Services, like DNS, WEC etc-->
+			<Image condition="is">System</Image> <!--Windows Services, RPC etc-->
 	  </NetworkConnect>	
   </EventFiltering>
 </Sysmon>
