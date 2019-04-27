@@ -4,6 +4,7 @@
       <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
       <Image condition="begin with">C:\Windows\SystemApps\Microsoft.MicrosoftEdge_</Image>
       <Image condition="is">C:\Program Files\internet explorer\iexplore.exe</Image>
+      <Image condition="is">C:\Program Files\Mozilla Firefox\firefox.exe</Image>
 	  </NetworkConnect>
   </EventFiltering>
 </Sysmon>
