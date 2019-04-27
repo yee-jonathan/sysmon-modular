@@ -1,7 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <ProcessCreate onmatch="include">
-          <Image name="technique_id=T1197,technique_name=BITS Jobs" condition="image">bitsadmin.exe</Image>
-      </ProcessCreate>
-  </EventFiltering>
-</Sysmon>

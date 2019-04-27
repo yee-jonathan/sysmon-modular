@@ -1,0 +1,8 @@
+<Sysmon schemaversion="4.1">
+   <EventFiltering>
+      <RegistryEvent onmatch="exclude">
+            <EventType condition="is">CreateKey</EventType><!-- Thanks to @Sboussaeden-->
+            <EventType condition="is">DeleteValue</EventType><!-- Thanks to @Sboussaeden-->
+		</RegistryEvent>
+  </EventFiltering>
+</Sysmon>

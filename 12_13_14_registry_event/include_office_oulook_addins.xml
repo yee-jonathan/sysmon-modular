@@ -1,7 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <RegistryEvent onmatch="include">
-			<TargetObject condition="contains">\Microsoft\Office\Outlook\Addins</TargetObject> <!--Microsoft:Office: Outlook add-ins-->
-		</RegistryEvent>
-  </EventFiltering>
-</Sysmon>

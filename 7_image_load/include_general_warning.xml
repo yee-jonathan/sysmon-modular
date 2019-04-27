@@ -1,7 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <ImageLoad onmatch="include">
-		<!--COMMENT:	Can cause high system load, disabled by default.-->
-		</ImageLoad>
-  </EventFiltering>
-</Sysmon>

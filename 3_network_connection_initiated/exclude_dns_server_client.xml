@@ -1,0 +1,7 @@
+<Sysmon schemaversion="4.1">
+   <EventFiltering>
+      <NetworkConnect onmatch="exclude">
+			<Image condition="end with">dns.exe</Image> <!--dns server-->
+	  </NetworkConnect>	
+  </EventFiltering>
+</Sysmon>

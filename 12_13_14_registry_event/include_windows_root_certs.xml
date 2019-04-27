@@ -1,8 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <RegistryEvent onmatch="include">
-			<TargetObject name="technique_id=T1130,technique_name=Install Root Certificate" condition="begin with">HKLM\SOFTWARE\Microsoft\EnterpriseCertificates\Root\Certificates</TargetObject>
-			<TargetObject name="technique_id=T1130,technique_name=Install Root Certificate" condition="contains">\Microsoft\SystemCertificates\Root\Certificates</TargetObject>
-		</RegistryEvent>
-  </EventFiltering>
-</Sysmon>

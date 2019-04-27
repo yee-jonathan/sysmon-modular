@@ -1,8 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <RegistryEvent onmatch="include">
-			<!--Group Policy integrity-->
-			<TargetObject condition="begin with">HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions</TargetObject> <!--Microsoft:Windows: Group Policy internally uses a plugin architecture that nothing should be modifying-->
-		</RegistryEvent>
-  </EventFiltering>
-</Sysmon>

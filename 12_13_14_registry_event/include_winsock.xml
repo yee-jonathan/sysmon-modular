@@ -1,9 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <RegistryEvent onmatch="include">
-			<!--Winsock and Winsock2-->
-			<TargetObject condition="begin with">HKLM\SYSTEM\CurrentControlSet\Services\WinSock</TargetObject> <!--Microsoft:Windows: Wildcard, includes Winsock and Winsock2-->
-			<TargetObject condition="end with">\ProxyServer</TargetObject> <!--Microsoft:Windows: System and user proxy server-->
-		</RegistryEvent>
-  </EventFiltering>
-</Sysmon>

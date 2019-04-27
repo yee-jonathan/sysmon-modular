@@ -1,8 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <RegistryEvent onmatch="include">
-			<TargetObject name="technique_id=T1089,technique_name=Disabling Security Tools" condition="contains">SYSTEM\CurrentControlSet\services\SysmonDrv</TargetObject><!--Mitre T1089--><!--Mitre T1054-->
-      <TargetObject name="technique_id=T1089,technique_name=Disabling Security Tools" condition="contains">SYSTEM\CurrentControlSet\services\Sysmon</TargetObject><!--Mitre T1089--><!--Mitre T1054-->
-		</RegistryEvent>
-  </EventFiltering>
-</Sysmon>

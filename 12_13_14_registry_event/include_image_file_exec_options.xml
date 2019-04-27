@@ -1,8 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <RegistryEvent onmatch="include">
-        <TargetObject name="technique_id=T1183,technique_name=Image File Execution Options Injection" condition="begin with">HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options</TargetObject>
-  			<TargetObject name="technique_id=T1183,technique_name=Image File Execution Options Injection" condition="begin with">HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options</TargetObject>
-  		</RegistryEvent>
-  </EventFiltering>
-</Sysmon>

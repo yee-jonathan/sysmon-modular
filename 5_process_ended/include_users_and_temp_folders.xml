@@ -1,9 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <ProcessTerminate onmatch="include">
-		<Image condition="begin with">C:\Users</Image> <!--Process terminations by user binaries-->
-		<Image condition="begin with">C:\Temp</Image> <!--Process terminations by temp binaries-->
-		<Image condition="begin with">C:\Windows\Temp</Image> <!--Process terminations by temp binaries-->
-	  </ProcessTerminate>
-  </EventFiltering>
-</Sysmon>

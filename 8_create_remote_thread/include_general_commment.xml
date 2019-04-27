@@ -1,8 +1,0 @@
-<Sysmon schemaversion="4.1">
-   <EventFiltering>
-      <CreateRemoteThread onmatch="include">
-	  		<!--COMMENT:	Monitor for processes injecting code into other processes. Often used by malware to cloak their actions.
-				Exclude mostly-safe sources and log anything else.-->
-		</CreateRemoteThread>
-  </EventFiltering>
-</Sysmon>
