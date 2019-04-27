@@ -1,0 +1,7 @@
+<Sysmon schemaversion="4.1">
+   <EventFiltering>
+      <RegistryEvent onmatch="exclude">
+			<Image condition="is">C:\Windows\system32\svchost.exe</Image> <!--Microsoft:Windows: LSASS process makes several reg mods, injection unlikely due to stability issues-->
+		</RegistryEvent>
+  </EventFiltering>
+</Sysmon>

@@ -1,0 +1,7 @@
+<Sysmon schemaversion="4.1">
+   <EventFiltering>
+      <ImageLoad onmatch="exclude">
+ 			<ImageLoaded condition="begin with">C:\Windows\System32\</ImageLoaded>
+  	  </ImageLoad>
+  </EventFiltering>
+</Sysmon>
