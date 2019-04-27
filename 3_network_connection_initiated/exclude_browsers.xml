@@ -1,7 +1,9 @@
 <Sysmon schemaversion="4.1">
    <EventFiltering>
       <NetworkConnect onmatch="exclude">
-       <Image condition="is">C:\Program Files\ESET\ESET Nod32 Antivirus\ekrn.exe</Image> <!--Credit d4ph1l -->
+      <Image condition="is">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image>
+      <Image condition="begin with">C:\Windows\SystemApps\Microsoft.MicrosoftEdge_</Image>
+      <Image condition="is">C:\Program Files\internet explorer\iexplore.exe</Image>
 	  </NetworkConnect>
   </EventFiltering>
 </Sysmon>

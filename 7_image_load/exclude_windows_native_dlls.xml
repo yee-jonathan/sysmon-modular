@@ -2,6 +2,7 @@
    <EventFiltering>
       <ImageLoad onmatch="exclude">
  			<ImageLoaded condition="begin with">C:\Windows\System32\</ImageLoaded>
+ 			<ImageLoaded condition="begin with">C:\Windows\SYSWOW64\</ImageLoaded>          
   	  </ImageLoad>
   </EventFiltering>
 </Sysmon>
