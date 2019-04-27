@@ -1,0 +1,8 @@
+<Sysmon schemaversion="4.1">
+   <EventFiltering>
+      <ImageLoad onmatch="exclude">
+ 			<Image condition="begin with">C:\Program Files\SplunkUniversalForwarder\bin\</Image> <!--Splunk:UniversalForwarder child processes-->
+ 			<Image condition="begin with">D:\Program Files\SplunkUniversalForwarder\bin\</Image> <!--Splunk:UniversalForwarder child processes-->
+  	  </ImageLoad>
+  </EventFiltering>
+</Sysmon>

@@ -1,0 +1,7 @@
+<Sysmon schemaversion="4.1">
+   <EventFiltering>
+      <RegistryEvent onmatch="exclude">
+			<TargetObject condition="contains">Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist</TargetObject> <!--Microsoft:IE: Extraneous activity-->
+		</RegistryEvent>
+  </EventFiltering>
+</Sysmon>
