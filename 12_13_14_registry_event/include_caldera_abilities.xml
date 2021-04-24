@@ -6,6 +6,7 @@
           <TargetObject name="technique_id=T1003.002,technique_name=OS Credential Dumping: Security Account Manager" condition="is">HKLM\security</TargetObject>
           <TargetObject name="technique_id=T1003.002,technique_name=OS Credential Dumping: Security Account Manager" condition="is">HKLM\system</TargetObject>
           <TargetObject name="technique_id=T1053.004,technique_name=OS Credential Dumping: LSA Secrets" condition="contains">HKLM\security\policy\secrets</TargetObject>
+          <TargetObject name="technique_id=T1089,technique_name=Disabling Security Tools" condition="contains">SYSTEM\CurrentControlSet\Services\SysmonDrv\Parameters</TargetObject>
       </RegistryEvent>
 </RuleGroup>
 </EventFiltering>

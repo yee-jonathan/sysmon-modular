@@ -1,0 +1,9 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+ <RuleGroup name="" groupRelation="or">
+      <FileCreate onmatch="include">
+			<TargetFilename name="T1218 Signed Binary Proxy Execution" condition="contains">cmd_dll.dll</TargetFilename> 
+		</FileCreate>
+</RuleGroup>
+</EventFiltering>
+</Sysmon>

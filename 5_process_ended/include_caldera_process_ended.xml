@@ -1,0 +1,9 @@
+<Sysmon schemaversion="4.30">
+   <EventFiltering>
+ <RuleGroup name="" groupRelation="or">
+      <ProcessTerminate onmatch="include">
+		<Image name="hh.exe Signed Binary Proxy Execution" condition="is">hh.exe</Image>
+	  </ProcessTerminate>
+</RuleGroup>
+</EventFiltering>
+</Sysmon>
