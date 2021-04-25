@@ -7,7 +7,12 @@
           <Image condition="is not">c:\windows\system32\mmc.exe</Image>
         </Rule>
           <ParentImage name="technique_id=T1548.002,technique_name=Bypass User Access Control" condition="image">fodhelper.exe</ParentImage>
-      </ProcessCreate>
+        <Rule name="sdclt Bypass UAC" groupRelation="and"> 
+           <Image name="technique_id=T1548.002,technique_name=Bypass User Access Control" condition="image">sdclt.exe</Image>
+           <ParentImage condition="image">powershell.exe</ParentImage>
+        </Rule>
+          <ParentImage name="technique_id=1548.002,technique_name=Bypass User Access Control" condition="image">ComputerDefaults.exe</ParentImage>
+      </ProcessCreate>        
 </RuleGroup>
 </EventFiltering>
 </Sysmon>

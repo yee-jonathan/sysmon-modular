@@ -7,7 +7,10 @@
             <TargetFilename condition="contains any">.com;.bat;.exe;.reg;.ps1;.vbs;.vba;.lnk;.doc;.xls;.hta;.bin;.7z;.dll;.xla;.cmd;.sh;.lnk;.pptm;.scr;.msi;.sct;.dmp</TargetFilename>
             <TargetFilename condition="contains">\Users\Public\</TargetFilename> <!--User Public folder-->
             <TargetFilename condition="contains any">.com;.bat;.exe;.reg;.ps1;.vbs;.vba;.lnk;.doc;.xls;.hta;.bin;.7z;.dll;.xla;.cmd;.sh;.lnk;.pptm;.scr;.msi;.sct;.dmp;.xml</TargetFilename>
-            <TargetFileName condition="contains">cmd_dll.cpl</TargetFileName> <!--T218.002 Signed Binary Proxy Execution: Contorl Panel-->
+            <TargetFilename condition="contains">cmd_dll.cpl</TargetFilename> <!--T218.002 Signed Binary Proxy Execution: Contorl Panel-->
+            <TargetFilename condtion="contains">data.zip</TargetFilename>
+            <TargetFilename name="technique_id=1548.002,technique_name=Bypass UAC with Mock Directories" condition="begins with">"C:\Windows \"</TargetFilename>
+            <TargetFilename name="technique_id=T1548.002,technique_name=Bypass User Access Control" condition="begins with">HKCU\Software\Classes\ms-settings\</TargetFilename>
          </Rule>
       </FileDelete>
      </RuleGroup>

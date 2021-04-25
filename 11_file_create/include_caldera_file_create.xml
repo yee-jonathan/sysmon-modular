@@ -3,6 +3,7 @@
  <RuleGroup name="" groupRelation="or">
       <FileCreate onmatch="include">
 			<TargetFilename name="T1218 Signed Binary Proxy Execution" condition="contains">cmd_dll.dll</TargetFilename> 
+      <TargetFilename name="T1074.001 Data Staged: Local Data Staging" condition="contains">data.zip</TargetFilename>
 		</FileCreate>
 </RuleGroup>
 </EventFiltering>
