@@ -8,7 +8,7 @@
           <TargetObject name="technique_id=T1053.004,technique_name=OS Credential Dumping: LSA Secrets" condition="contains">HKLM\security\policy\secrets</TargetObject>
           <TargetObject name="technique_id=T1089,technique_name=Disabling Security Tools" condition="contains">SYSTEM\CurrentControlSet\Services\SysmonDrv\Parameters</TargetObject>
           <TargetObject name="technique_id=T1548.002,technique_name=Bypass User Access Control" condition="is">HKCU\Software\Classes\Folder\</TargetObject>
-          <TargetObject name="technique_id=T1548.002,technique_name=Bypass User Access Control" condition="begins with">HKCU\Software\Classes\ms-settings\shell\open\command</TargetObject>
+          <TargetObject name="technique_id=T1548.002,technique_name=Bypass User Access Control" condition="begin with">HKCU\Software\Classes\ms-settings\shell\open\command</TargetObject>
       </RegistryEvent>
 </RuleGroup>
 </EventFiltering>
