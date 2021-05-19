@@ -1,0 +1,100 @@
+<Sysmon schemaversion="4.60">
+  <HashAlgorithms>MD5</HashAlgorithms>
+  <!-- This now also determines the file names of the files preserved (String) -->
+  <CheckRevocation />
+  <DnsLookup>False</DnsLookup>
+  <!-- Disables lookup behavior, default is True (Boolean) -->
+  <ArchiveDirectory>Sysmon</ArchiveDirectory>
+  <!-- Sets the name of the directory in the C:\ root where preserved files will be saved (String)-->
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 1 == Process Creation. -->
+      <ProcessCreate onmatch="exclude">
+      </ProcessCreate>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 2 == File Creation Time. -->
+      <FileCreateTime onmatch="exclude">
+      </FileCreateTime>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 3 == Network Connection. -->
+      <NetworkConnect onmatch="exclude">
+      </NetworkConnect>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 5 == Process Terminated. -->
+      <ProcessTerminate onmatch="exclude">
+      </ProcessTerminate>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 6 == Driver Loaded. -->
+      <!--Default to log all and exclude only valid signed Microsoft or Intel drivers-->
+      <DriverLoad onmatch="exclude">
+      </DriverLoad>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 7 == Image Loaded. -->
+      <ImageLoad onmatch="exclude">
+      </ImageLoad>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 8 == CreateRemoteThread. -->
+      <!--Default to log all and exclude a few common processes-->
+      <CreateRemoteThread onmatch="exclude">
+      </CreateRemoteThread>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 9 == RawAccessRead. RESOURCE Intensive-->
+      <RawAccessRead onmatch="exclude" />
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 10 == ProcessAccess. HIGH Resource usage-->
+      <ProcessAccess onmatch="exclude">
+      </ProcessAccess>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 11 == FileCreate. -->
+      <FileCreate onmatch="exclude">
+      </FileCreate>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 12,13,14 == RegObject added/deleted, RegValue Set, RegObject Renamed. -->
+      <RegistryEvent onmatch="exclude">
+      </RegistryEvent>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 15 == FileStream Created. -->
+      <FileCreateStreamHash onmatch="exclude">
+      </FileCreateStreamHash>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 17,18 == PipeEvent. Log Named pipe created & Named pipe connected -->
+      <PipeEvent onmatch="exclude">
+      </PipeEvent>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 19,20,21, == WmiEvent. Log all WmiEventFilter, WmiEventConsumer, WmiEventConsumerToFilter activity -->
+      <WmiEvent onmatch="exclude">
+      </WmiEvent>
+    </RuleGroup>
+       <!-- Event ID 22 == DNS Queries and their results-->
+      <!--Default to log all and exclude a few common processes-->
+
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 23 == File Delete and overwrite events which saves a copy to the archivedir-->
+      <FileDelete onmatch="exclude">
+      </FileDelete>
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 24 == Clipboard change events, only captures text, not files -->
+      <!-- Default set to disabled due to privacy implications and potential data you leave for attackers, enable with care!-->
+      <ClipboardChange onmatch="exclude" />
+    </RuleGroup>
+    <RuleGroup name="" groupRelation="or">
+      <!-- Event ID 25 == Process tampering events -->
+      <ProcessTampering onmatch="exclude">
+      </ProcessTampering>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
